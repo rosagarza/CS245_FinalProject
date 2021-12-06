@@ -1,0 +1,1459 @@
+Using GPU--------------------------------------------------------------------------------
+predicting data at: Dec
+100%|██████████| 62/62 [00:04<00:00, 14.85it/s]
+/usr/local/lib/python3.7/dist-packages/torch_geometric/deprecation.py:13: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+average number of edges per graph is 52900.0000
+100%|██████████| 5/5 [00:00<00:00, 14.02it/s]
+average number of edges per graph is 52900.0000
+/content/drive/MyDrive/CG-ODE-main/CG-ODE-main/models
+
+Namespace(alias='run', augment_dim=0, batch_size=8, clip=10, condition_length=21, datapath='/content/drive/MyDrive/CG-ODE-main/CG-ODE-main/data/', dataset='Dec', dropout=0.2, edge_lamda=0.5, feature_out='Deaths', feature_out_index=[1], features='tot_cases,Deaths,new_case,new_deaths,one_dose,fully_vac,Population,Mobility', gen_layers=1, l2=1e-05, load=None, lr=0.005, niters=100, num_atoms=50, ode_dims=20, optimizer='AdamW', output_dim=1, pred_length=14, random_seed=1991, rec_dims=64, rec_layers=1, save='experiments/', solver='rk4', split_interval=3, z0_encoder='GTrans')
+run
+encoder_z0.gcs.0.base_conv.w_k_list.0.weight
+encoder_z0.gcs.0.base_conv.w_k_list.0.bias
+encoder_z0.gcs.0.base_conv.w_q_list.0.weight
+encoder_z0.gcs.0.base_conv.w_q_list.0.bias
+encoder_z0.gcs.0.base_conv.w_v_list.0.weight
+encoder_z0.gcs.0.base_conv.w_v_list.0.bias
+encoder_z0.sequence_w.weight
+encoder_z0.sequence_w.bias
+encoder_z0.hidden_to_z0.0.weight
+encoder_z0.hidden_to_z0.0.bias
+encoder_z0.hidden_to_z0.2.weight
+encoder_z0.hidden_to_z0.2.bias
+encoder_z0.adapt_w.weight
+encoder_z0.adapt_w.bias
+diffeq_solver.ode_func.node_ode_func_net.w_node
+diffeq_solver.ode_func.edge_ode_func_net.w_node2edge.weight
+diffeq_solver.ode_func.edge_ode_func_net.w_node2edge.bias
+diffeq_solver.ode_func.edge_ode_func_net.w_edge2value.0.weight
+diffeq_solver.ode_func.edge_ode_func_net.w_edge2value.0.bias
+diffeq_solver.ode_func.edge_ode_func_net.w_edge2value.2.weight
+diffeq_solver.ode_func.edge_ode_func_net.w_edge2value.2.bias
+diffeq_solver.ode_func.edge_ode_func_net.edge_self_evolve.0.weight
+diffeq_solver.ode_func.edge_ode_func_net.edge_self_evolve.0.bias
+diffeq_solver.ode_func.edge_ode_func_net.edge_self_evolve.2.weight
+diffeq_solver.ode_func.edge_ode_func_net.edge_self_evolve.2.bias
+decoder_node.decoder.0.weight
+decoder_node.decoder.0.bias
+decoder_node.decoder.2.weight
+decoder_node.decoder.2.bias
+decoder_edge.decoder.0.weight
+decoder_edge.decoder.0.bias
+decoder_edge.decoder.2.weight
+decoder_edge.decoder.2.bias
+100%|██████████| 8/8 [00:05<00:00,  1.58it/s]
+100%|██████████| 1/1 [00:00<00:00,  1.92it/s]
+Experiment 1151
+Epoch 0001 [Train seq (cond on sampled tp)] | Loss 148280220791.262085 | MAPE 3.281943 | RMSE 16697.869145 | Likelihood -148280220790.121368 | KL fp 1.1407 | FP STD 0.5488|
+Epoch 0001 [Val seq (cond on sampled tp)] |  MAPE 2.417782 | RMSE 13679.681283 |
+NumExpr defaulting to 2 threads.
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.18it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  4.34it/s]
+Best Val!
+Epoch 0001 [Test seq (cond on sampled tp)] | MAPE 0.321578 | RMSE 2285.934419|
+0.4221544563770294,0.28192979097366333,0.260649710893631
+3184.9908948064513,540.9196451414942,3131.892718469137
+0.4221544563770294,0.28192979097366333,0.260649710893631
+3184.9908948064513,540.9196451414942,3131.892718469137
+Epoch 0001 [Test seq (cond on sampled tp)] | Best Test MAPE 0.321578|Best Test RMSE 2285.934419|
+100%|██████████| 8/8 [00:04<00:00,  1.72it/s]
+100%|██████████| 1/1 [00:00<00:00,  1.92it/s]
+Experiment 1151
+Epoch 0002 [Train seq (cond on sampled tp)] | Loss 148280132976.924042 | MAPE 3.281749 | RMSE 16697.794083 | Likelihood -148280132975.647095 | KL fp 1.2769 | FP STD 0.6157|
+Epoch 0002 [Val seq (cond on sampled tp)] |  MAPE 2.417751 | RMSE 13679.594731 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.73it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.59it/s]
+Best Val!
+Epoch 0002 [Test seq (cond on sampled tp)] | MAPE 0.321435 | RMSE 2286.492101|
+0.42226743698120117,0.28125056624412537,0.26078590750694275
+3186.3124454453614,539.6361331953226,3133.527724466468
+0.42226743698120117,0.28125056624412537,0.26078590750694275
+3186.3124454453614,539.6361331953226,3133.527724466468
+Epoch 0002 [Test seq (cond on sampled tp)] | Best Test MAPE 0.321435|Best Test RMSE 2286.492101|
+100%|██████████| 8/8 [00:04<00:00,  1.81it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.99it/s]
+Experiment 1151
+Epoch 0003 [Train seq (cond on sampled tp)] | Loss 148280057067.967590 | MAPE 3.281585 | RMSE 16697.725272 | Likelihood -148280057066.682281 | KL fp 1.2853 | FP STD 0.6897|
+Epoch 0003 [Val seq (cond on sampled tp)] |  MAPE 2.417683 | RMSE 13679.381273 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.68it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.15it/s]
+Best Val!
+Epoch 0003 [Test seq (cond on sampled tp)] | MAPE 0.321218 | RMSE 2287.146937|
+0.42253363132476807,0.2802064120769501,0.2609141170978546
+3188.67527352661,537.6908963335719,3135.074640259782
+0.42253363132476807,0.2802064120769501,0.2609141170978546
+3188.67527352661,537.6908963335719,3135.074640259782
+Epoch 0003 [Test seq (cond on sampled tp)] | Best Test MAPE 0.321218|Best Test RMSE 2287.146937|
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.07it/s]
+Experiment 1151
+Epoch 0004 [Train seq (cond on sampled tp)] | Loss 148280016494.392578 | MAPE 3.281337 | RMSE 16697.688672 | Likelihood -148280016493.206177 | KL fp 1.1864 | FP STD 0.7783|
+Epoch 0004 [Val seq (cond on sampled tp)] |  MAPE 2.417589 | RMSE 13679.122779 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.37it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.40it/s]
+Best Val!
+Epoch 0004 [Test seq (cond on sampled tp)] | MAPE 0.320755 | RMSE 2288.221922|
+0.4226795732975006,0.2783426344394684,0.2612442374229431
+3191.476774159574,534.1631890162406,3139.025804290242
+0.4226795732975006,0.2783426344394684,0.2612442374229431
+3191.476774159574,534.1631890162406,3139.025804290242
+Epoch 0004 [Test seq (cond on sampled tp)] | Best Test MAPE 0.320755|Best Test RMSE 2288.221922|
+100%|██████████| 8/8 [00:04<00:00,  1.87it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.97it/s]
+Experiment 1151
+Epoch 0005 [Train seq (cond on sampled tp)] | Loss 148279942126.141724 | MAPE 3.280977 | RMSE 16697.600127 | Likelihood -148279942124.781219 | KL fp 1.3605 | FP STD 0.8529|
+Epoch 0005 [Val seq (cond on sampled tp)] |  MAPE 2.417412 | RMSE 13678.561913 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.91it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.67it/s]
+Best Val!
+Epoch 0005 [Test seq (cond on sampled tp)] | MAPE 0.320042 | RMSE 2289.916248|
+0.42314639687538147,0.27531641721725464,0.26166245341300964
+3197.249286496128,528.4504766295513,3144.0489818067404
+0.42314639687538147,0.27531641721725464,0.26166245341300964
+3197.249286496128,528.4504766295513,3144.0489818067404
+Epoch 0005 [Test seq (cond on sampled tp)] | Best Test MAPE 0.320042|Best Test RMSE 2289.916248|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.22it/s]
+Experiment 1151
+Epoch 0006 [Train seq (cond on sampled tp)] | Loss 148279775595.988556 | MAPE 3.280409 | RMSE 16697.461574 | Likelihood -148279775593.897125 | KL fp 2.0914 | FP STD 0.9393|
+Epoch 0006 [Val seq (cond on sampled tp)] |  MAPE 2.417224 | RMSE 13677.994590 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.86it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.30it/s]
+Best Val!
+Epoch 0006 [Test seq (cond on sampled tp)] | MAPE 0.319266 | RMSE 2292.117232|
+0.42372363805770874,0.2718670666217804,0.2622065544128418
+3203.697083058884,522.0691106070153,3150.585501141018
+0.42372363805770874,0.2718670666217804,0.2622065544128418
+3203.697083058884,522.0691106070153,3150.585501141018
+Epoch 0006 [Test seq (cond on sampled tp)] | Best Test MAPE 0.319266|Best Test RMSE 2292.117232|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.18it/s]
+Experiment 1151
+Epoch 0007 [Train seq (cond on sampled tp)] | Loss 148279529581.991272 | MAPE 3.279729 | RMSE 16697.271723 | Likelihood -148279529579.397461 | KL fp 2.5938 | FP STD 1.0716|
+Epoch 0007 [Val seq (cond on sampled tp)] |  MAPE 2.416993 | RMSE 13677.211997 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.40it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.33it/s]
+Best Val!
+Epoch 0007 [Test seq (cond on sampled tp)] | MAPE 0.318357 | RMSE 2294.582404|
+0.42414167523384094,0.26811447739601135,0.262813538312912
+3210.7176767819374,515.1438512687499,3157.8856850747466
+0.42414167523384094,0.26811447739601135,0.262813538312912
+3210.7176767819374,515.1438512687499,3157.8856850747466
+Epoch 0007 [Test seq (cond on sampled tp)] | Best Test MAPE 0.318357|Best Test RMSE 2294.582404|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.36it/s]
+Experiment 1151
+Epoch 0008 [Train seq (cond on sampled tp)] | Loss 148279366892.699402 | MAPE 3.278943 | RMSE 16697.100152 | Likelihood -148279366889.543365 | KL fp 3.1560 | FP STD 1.1823|
+Epoch 0008 [Val seq (cond on sampled tp)] |  MAPE 2.416689 | RMSE 13676.342201 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.37it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.52it/s]
+Best Val!
+Epoch 0008 [Test seq (cond on sampled tp)] | MAPE 0.317241 | RMSE 2298.157181|
+0.4251648485660553,0.26290830969810486,0.2636486887931824
+3221.125579669318,505.4408193596952,3167.9051437819285
+0.4251648485660553,0.26290830969810486,0.2636486887931824
+3221.125579669318,505.4408193596952,3167.9051437819285
+Epoch 0008 [Test seq (cond on sampled tp)] | Best Test MAPE 0.317241|Best Test RMSE 2298.157181|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.30it/s]
+Experiment 1151
+Epoch 0009 [Train seq (cond on sampled tp)] | Loss 148279052141.605408 | MAPE 3.277860 | RMSE 16696.853379 | Likelihood -148279052137.731537 | KL fp 3.8739 | FP STD 1.2424|
+Epoch 0009 [Val seq (cond on sampled tp)] |  MAPE 2.416299 | RMSE 13675.037111 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.72it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.25it/s]
+Best Val!
+Epoch 0009 [Test seq (cond on sampled tp)] | MAPE 0.315610 | RMSE 2302.508987|
+0.4259088337421417,0.25614190101623535,0.2647798955440521
+3233.081192917988,492.9486376642094,3181.49713185475
+0.4259088337421417,0.25614190101623535,0.2647798955440521
+3233.081192917988,492.9486376642094,3181.49713185475
+Epoch 0009 [Test seq (cond on sampled tp)] | Best Test MAPE 0.315610|Best Test RMSE 2302.508987|
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.42it/s]
+Experiment 1151
+Epoch 0010 [Train seq (cond on sampled tp)] | Loss 148278684269.777679 | MAPE 3.276651 | RMSE 16696.532073 | Likelihood -148278684265.023804 | KL fp 4.7538 | FP STD 1.2903|
+Epoch 0010 [Val seq (cond on sampled tp)] |  MAPE 2.415946 | RMSE 13674.103408 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.60it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.77it/s]
+Best Val!
+Epoch 0010 [Test seq (cond on sampled tp)] | MAPE 0.313698 | RMSE 2306.968242|
+0.42731359601020813,0.2476774901151657,0.2661014795303345
+3246.857711696033,476.6591746206088,3197.387840096975
+0.42731359601020813,0.2476774901151657,0.2661014795303345
+3246.857711696033,476.6591746206088,3197.387840096975
+Epoch 0010 [Test seq (cond on sampled tp)] | Best Test MAPE 0.313698|Best Test RMSE 2306.968242|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.17it/s]
+Experiment 1151
+Epoch 0011 [Train seq (cond on sampled tp)] | Loss 148278105839.025146 | MAPE 3.275180 | RMSE 16696.090471 | Likelihood -148278105833.225464 | KL fp 5.7997 | FP STD 1.3572|
+Epoch 0011 [Val seq (cond on sampled tp)] |  MAPE 2.415445 | RMSE 13672.442357 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.58it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.85it/s]
+Best Val!
+Epoch 0011 [Test seq (cond on sampled tp)] | MAPE 0.311752 | RMSE 2312.025699|
+0.4283895790576935,0.2395521104335785,0.2673138678073883
+3262.034794418968,462.1011455839511,3211.9411576179286
+0.4283895790576935,0.2395521104335785,0.2673138678073883
+3262.034794418968,462.1011455839511,3211.9411576179286
+Epoch 0011 [Test seq (cond on sampled tp)] | Best Test MAPE 0.311752|Best Test RMSE 2312.025699|
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.43it/s]
+Experiment 1151
+Epoch 0012 [Train seq (cond on sampled tp)] | Loss 148277600367.349762 | MAPE 3.273564 | RMSE 16695.665328 | Likelihood -148277600360.486206 | KL fp 6.8636 | FP STD 1.3973|
+Epoch 0012 [Val seq (cond on sampled tp)] |  MAPE 2.414992 | RMSE 13671.326490 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.23it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.22it/s]
+Best Val!
+Epoch 0012 [Test seq (cond on sampled tp)] | MAPE 0.309640 | RMSE 2319.499880|
+0.4300463795661926,0.22981604933738708,0.2690565884113312
+3281.9366233978376,443.6955600408911,3232.8674578460527
+0.4300463795661926,0.22981604933738708,0.2690565884113312
+3281.9366233978376,443.6955600408911,3232.8674578460527
+Epoch 0012 [Test seq (cond on sampled tp)] | Best Test MAPE 0.309640|Best Test RMSE 2319.499880|
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.44it/s]
+Experiment 1151
+Epoch 0013 [Train seq (cond on sampled tp)] | Loss 148277246193.336945 | MAPE 3.271922 | RMSE 16695.310539 | Likelihood -148277246185.540955 | KL fp 7.7960 | FP STD 1.4087|
+Epoch 0013 [Val seq (cond on sampled tp)] |  MAPE 2.414476 | RMSE 13669.558003 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.21it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.49it/s]
+Best Val!
+Epoch 0013 [Test seq (cond on sampled tp)] | MAPE 0.308579 | RMSE 2323.620189|
+0.4311293363571167,0.22479358315467834,0.26981282234191895
+3294.58434404099,434.3582730592339,3241.9179508432967
+0.4311293363571167,0.22479358315467834,0.26981282234191895
+3294.58434404099,434.3582730592339,3241.9179508432967
+Epoch 0013 [Test seq (cond on sampled tp)] | Best Test MAPE 0.308579|Best Test RMSE 2323.620189|
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.48it/s]
+Experiment 1151
+Epoch 0014 [Train seq (cond on sampled tp)] | Loss 148276736622.511078 | MAPE 3.270834 | RMSE 16694.855053 | Likelihood -148276736614.769104 | KL fp 7.7420 | FP STD 1.3825|
+Epoch 0014 [Val seq (cond on sampled tp)] |  MAPE 2.414368 | RMSE 13669.019570 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.52it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.31it/s]
+Best Val!
+Epoch 0014 [Test seq (cond on sampled tp)] | MAPE 0.307020 | RMSE 2324.416673|
+0.43139609694480896,0.21914666891098022,0.2705157399177551
+3298.3069899571205,424.5616673405643,3250.3813622404373
+0.43139609694480896,0.21914666891098022,0.2705157399177551
+3298.3069899571205,424.5616673405643,3250.3813622404373
+Epoch 0014 [Test seq (cond on sampled tp)] | Best Test MAPE 0.307020|Best Test RMSE 2324.416673|
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.13it/s]
+Experiment 1151
+Epoch 0015 [Train seq (cond on sampled tp)] | Loss 148276413292.992188 | MAPE 3.269574 | RMSE 16694.476579 | Likelihood -148276413284.925323 | KL fp 8.0669 | FP STD 1.4356|
+Epoch 0015 [Val seq (cond on sampled tp)] |  MAPE 2.413866 | RMSE 13667.721390 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.83it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.38it/s]
+Best Val!
+Epoch 0015 [Test seq (cond on sampled tp)] | MAPE 0.304305 | RMSE 2330.655952|
+0.43313682079315186,0.2079358845949173,0.27184292674064636
+3322.1089687124954,403.52302056388305,3266.335867604555
+0.43313682079315186,0.2079358845949173,0.27184292674064636
+3322.1089687124954,403.52302056388305,3266.335867604555
+Epoch 0015 [Test seq (cond on sampled tp)] | Best Test MAPE 0.304305|Best Test RMSE 2330.655952|
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.41it/s]
+Experiment 1151
+Epoch 0016 [Train seq (cond on sampled tp)] | Loss 148275939694.319397 | MAPE 3.267624 | RMSE 16694.138994 | Likelihood -148275939685.218750 | KL fp 9.1007 | FP STD 1.4852|
+Epoch 0016 [Val seq (cond on sampled tp)] |  MAPE 2.413159 | RMSE 13665.758084 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.39it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.29it/s]
+Best Val!
+Epoch 0016 [Test seq (cond on sampled tp)] | MAPE 0.302230 | RMSE 2339.870823|
+0.43532732129096985,0.19747646152973175,0.2738870084285736
+3345.5256687103747,383.2975345602943,3290.7892670300234
+0.43532732129096985,0.19747646152973175,0.2738870084285736
+3345.5256687103747,383.2975345602943,3290.7892670300234
+Epoch 0016 [Test seq (cond on sampled tp)] | Best Test MAPE 0.302230|Best Test RMSE 2339.870823|
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.18it/s]
+Experiment 1151
+Epoch 0017 [Train seq (cond on sampled tp)] | Loss 148275667437.784180 | MAPE 3.265150 | RMSE 16693.915958 | Likelihood -148275667427.369385 | KL fp 10.4148 | FP STD 1.4168|
+Epoch 0017 [Val seq (cond on sampled tp)] |  MAPE 2.412286 | RMSE 13663.114140 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.43it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.22it/s]
+Best Val!
+Epoch 0017 [Test seq (cond on sampled tp)] | MAPE 0.296655 | RMSE 2345.621589|
+0.43684661388397217,0.17675788700580597,0.27636030316352844
+3370.726479558969,345.51214251455764,3320.6261457743176
+0.43684661388397217,0.17675788700580597,0.27636030316352844
+3370.726479558969,345.51214251455764,3320.6261457743176
+Epoch 0017 [Test seq (cond on sampled tp)] | Best Test MAPE 0.296655|Best Test RMSE 2345.621589|
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.22it/s]
+Experiment 1151
+Epoch 0018 [Train seq (cond on sampled tp)] | Loss 148274461168.160858 | MAPE 3.261744 | RMSE 16692.849742 | Likelihood -148274461156.116577 | KL fp 12.0443 | FP STD 1.3586|
+Epoch 0018 [Val seq (cond on sampled tp)] |  MAPE 2.411107 | RMSE 13659.234532 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.29it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.28it/s]
+Best Val!
+Epoch 0018 [Test seq (cond on sampled tp)] | MAPE 0.293617 | RMSE 2365.665884|
+0.4414881467819214,0.15949301421642303,0.27987000346183777
+3419.4240743142695,314.8941414388334,3362.679437591398
+0.4414881467819214,0.15949301421642303,0.27987000346183777
+3419.4240743142695,314.8941414388334,3362.679437591398
+Epoch 0018 [Test seq (cond on sampled tp)] | Best Test MAPE 0.293617|Best Test RMSE 2365.665884|
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.94it/s]
+Experiment 1151
+Epoch 0019 [Train seq (cond on sampled tp)] | Loss 148273684593.279938 | MAPE 3.258295 | RMSE 16692.244449 | Likelihood -148273684579.541351 | KL fp 13.7386 | FP STD 1.3542|
+Epoch 0019 [Val seq (cond on sampled tp)] |  MAPE 2.410006 | RMSE 13655.885764 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.22it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.10it/s]
+Best Val!
+Epoch 0019 [Test seq (cond on sampled tp)] | MAPE 0.286729 | RMSE 2372.623286|
+0.44278737902641296,0.1344587504863739,0.28294166922569275
+3449.127570850345,269.1481933805241,3399.5940934176247
+0.44278737902641296,0.1344587504863739,0.28294166922569275
+3449.127570850345,269.1481933805241,3399.5940934176247
+Epoch 0019 [Test seq (cond on sampled tp)] | Best Test MAPE 0.286729|Best Test RMSE 2372.623286|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.96it/s]
+Experiment 1151
+Epoch 0020 [Train seq (cond on sampled tp)] | Loss 148272333172.002411 | MAPE 3.254453 | RMSE 16690.967797 | Likelihood -148272333156.706085 | KL fp 15.2963 | FP STD 1.4045|
+Epoch 0020 [Val seq (cond on sampled tp)] |  MAPE 2.408967 | RMSE 13653.126235 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.90it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.60it/s]
+Best Val!
+Epoch 0020 [Test seq (cond on sampled tp)] | MAPE 0.284718 | RMSE 2392.639972|
+0.4466801881790161,0.12089858949184418,0.2865762710571289
+3487.8821654407993,246.65322316969628,3443.384526886302
+0.4466801881790161,0.12089858949184418,0.2865762710571289
+3487.8821654407993,246.65322316969628,3443.384526886302
+Epoch 0020 [Test seq (cond on sampled tp)] | Best Test MAPE 0.284718|Best Test RMSE 2392.639972|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.31it/s]
+Experiment 1151
+Epoch 0021 [Train seq (cond on sampled tp)] | Loss 148271719796.161804 | MAPE 3.250583 | RMSE 16690.542681 | Likelihood -148271719779.408020 | KL fp 16.7538 | FP STD 1.4924|
+Epoch 0021 [Val seq (cond on sampled tp)] |  MAPE 2.407812 | RMSE 13650.181537 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.16it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.08it/s]
+Best Val!
+Epoch 0021 [Test seq (cond on sampled tp)] | MAPE 0.279716 | RMSE 2406.721782|
+0.4524576961994171,0.09713708609342575,0.28955215215682983
+3538.159973771678,202.8343497475218,3479.171021953362
+0.4524576961994171,0.09713708609342575,0.28955215215682983
+3538.159973771678,202.8343497475218,3479.171021953362
+Epoch 0021 [Test seq (cond on sampled tp)] | Best Test MAPE 0.279716|Best Test RMSE 2406.721782|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.34it/s]
+Experiment 1151
+Epoch 0022 [Train seq (cond on sampled tp)] | Loss 148270463351.779694 | MAPE 3.246152 | RMSE 16689.350998 | Likelihood -148270463333.479248 | KL fp 18.3004 | FP STD 1.5236|
+Epoch 0022 [Val seq (cond on sampled tp)] |  MAPE 2.406584 | RMSE 13646.637095 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.00it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.24it/s]
+Best Val!
+Epoch 0022 [Test seq (cond on sampled tp)] | MAPE 0.275265 | RMSE 2419.269305|
+0.45881614089012146,0.07341007143259048,0.29357022047042847
+3571.5870421984678,158.90645587498955,3527.314417513698
+0.45881614089012146,0.07341007143259048,0.29357022047042847
+3571.5870421984678,158.90645587498955,3527.314417513698
+Epoch 0022 [Test seq (cond on sampled tp)] | Best Test MAPE 0.275265|Best Test RMSE 2419.269305|
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.44it/s]
+Experiment 1151
+Epoch 0023 [Train seq (cond on sampled tp)] | Loss 148269569400.390625 | MAPE 3.241642 | RMSE 16688.435000 | Likelihood -148269569380.222656 | KL fp 20.1680 | FP STD 1.5521|
+Epoch 0023 [Val seq (cond on sampled tp)] |  MAPE 2.405291 | RMSE 13643.312794 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.64it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.27it/s]
+Best Val!
+Epoch 0023 [Test seq (cond on sampled tp)] | MAPE 0.274108 | RMSE 2446.936249|
+0.4685247838497162,0.05518777668476105,0.29861071705818176
+3629.2559843582267,123.76110272163463,3587.7916606179906
+0.4685247838497162,0.05518777668476105,0.29861071705818176
+3629.2559843582267,123.76110272163463,3587.7916606179906
+Epoch 0023 [Test seq (cond on sampled tp)] | Best Test MAPE 0.274108|Best Test RMSE 2446.936249|
+100%|██████████| 8/8 [00:04<00:00,  1.87it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.30it/s]
+Experiment 1151
+Epoch 0024 [Train seq (cond on sampled tp)] | Loss 148267999484.054932 | MAPE 3.236598 | RMSE 16687.366659 | Likelihood -148267999462.247406 | KL fp 21.8075 | FP STD 1.6160|
+Epoch 0024 [Val seq (cond on sampled tp)] |  MAPE 2.403380 | RMSE 13637.361622 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.48it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.47it/s]
+Best Val!
+Epoch 0024 [Test seq (cond on sampled tp)] | MAPE 0.274989 | RMSE 2472.611216|
+0.47963443398475647,0.04271245375275612,0.30261898040771484
+3687.489525408852,94.29695655547425,3636.0471669107924
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.07it/s]
+Experiment 1151
+Epoch 0025 [Train seq (cond on sampled tp)] | Loss 148267255676.171051 | MAPE 3.231307 | RMSE 16686.884326 | Likelihood -148267255652.526123 | KL fp 23.6449 | FP STD 1.6671|
+Epoch 0025 [Val seq (cond on sampled tp)] |  MAPE 2.402165 | RMSE 13634.866483 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.62it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.30it/s]
+Best Val!
+Epoch 0025 [Test seq (cond on sampled tp)] | MAPE 0.278647 | RMSE 2506.042425|
+0.4900341033935547,0.03939452022314072,0.306513249874115
+3739.22157674562,95.90800645996663,3682.9976920981094
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.39it/s]
+Experiment 1151
+Epoch 0026 [Train seq (cond on sampled tp)] | Loss 148266507648.039276 | MAPE 3.225481 | RMSE 16685.808956 | Likelihood -148266507622.464783 | KL fp 25.5745 | FP STD 1.7303|
+Epoch 0026 [Val seq (cond on sampled tp)] |  MAPE 2.399932 | RMSE 13627.867918 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.81it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.28it/s]
+Best Val!
+Epoch 0026 [Test seq (cond on sampled tp)] | MAPE 0.288932 | RMSE 2561.719695|
+0.5021315217018127,0.0524507574737072,0.31221243739128113
+3806.229105032959,127.74443481028831,3751.1855459307794
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.26it/s]
+Experiment 1151
+Epoch 0027 [Train seq (cond on sampled tp)] | Loss 148266516994.241638 | MAPE 3.219935 | RMSE 16685.947523 | Likelihood -148266516966.632446 | KL fp 27.6092 | FP STD 1.7258|
+Epoch 0027 [Val seq (cond on sampled tp)] |  MAPE 2.397851 | RMSE 13621.726175 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.58it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.68it/s]
+Best Val!
+Epoch 0027 [Test seq (cond on sampled tp)] | MAPE 0.304746 | RMSE 2625.226812|
+0.513353705406189,0.08223854005336761,0.3186444938182831
+3870.360319143426,176.72572654221852,3828.594389589997
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.41it/s]
+Experiment 1151
+Epoch 0028 [Train seq (cond on sampled tp)] | Loss 148265105924.785583 | MAPE 3.213411 | RMSE 16684.752500 | Likelihood -148265105894.982300 | KL fp 29.8033 | FP STD 1.6701|
+Epoch 0028 [Val seq (cond on sampled tp)] |  MAPE 2.396629 | RMSE 13620.037592 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.66it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.57it/s]
+Best Val!
+Epoch 0028 [Test seq (cond on sampled tp)] | MAPE 0.323142 | RMSE 2693.282582|
+0.5242255926132202,0.12145820260047913,0.32374307513237
+3943.2780779447953,246.83188705827698,3889.7377803651493
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.34it/s]
+Experiment 1151
+Epoch 0029 [Train seq (cond on sampled tp)] | Loss 148263211271.048004 | MAPE 3.206758 | RMSE 16682.890270 | Likelihood -148263211238.930878 | KL fp 32.1171 | FP STD 1.6807|
+Epoch 0029 [Val seq (cond on sampled tp)] |  MAPE 2.394416 | RMSE 13614.483464 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.41it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.08it/s]
+Best Val!
+Epoch 0029 [Test seq (cond on sampled tp)] | MAPE 0.343906 | RMSE 2768.702057|
+0.5385727286338806,0.16277946531772614,0.33036625385284424
+4016.5709255532884,320.0784815869383,3969.456763840614
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.47it/s]
+Experiment 1151
+Epoch 0030 [Train seq (cond on sampled tp)] | Loss 148263359885.794495 | MAPE 3.200237 | RMSE 16682.619159 | Likelihood -148263359851.595428 | KL fp 34.1990 | FP STD 1.7719|
+Epoch 0030 [Val seq (cond on sampled tp)] |  MAPE 2.392742 | RMSE 13611.640900 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.96it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.19it/s]
+Best Val!
+Epoch 0030 [Test seq (cond on sampled tp)] | MAPE 0.363519 | RMSE 2837.707673|
+0.5528104901313782,0.20203420519828796,0.3357120454311371
+4087.2463835692606,392.2953487170094,4033.581287144217
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.48it/s]
+Experiment 1151
+Epoch 0031 [Train seq (cond on sampled tp)] | Loss 148263103246.459381 | MAPE 3.193349 | RMSE 16682.417735 | Likelihood -148263103210.473816 | KL fp 35.9856 | FP STD 1.7987|
+Epoch 0031 [Val seq (cond on sampled tp)] |  MAPE 2.390644 | RMSE 13606.951165 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.23it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.88it/s]
+Best Val!
+Epoch 0031 [Test seq (cond on sampled tp)] | MAPE 0.381565 | RMSE 2911.065950|
+0.5650079846382141,0.23751872777938843,0.3421686589717865
+4163.117581812938,458.7955529154571,4111.284714052287
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.43it/s]
+Experiment 1151
+Epoch 0032 [Train seq (cond on sampled tp)] | Loss 148262991565.082642 | MAPE 3.186982 | RMSE 16682.667533 | Likelihood -148262991527.406189 | KL fp 37.6764 | FP STD 1.7615|
+Epoch 0032 [Val seq (cond on sampled tp)] |  MAPE 2.388038 | RMSE 13600.070000 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.28it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.01it/s]
+Best Val!
+Epoch 0032 [Test seq (cond on sampled tp)] | MAPE 0.398312 | RMSE 2977.694283|
+0.5794181823730469,0.2682616412639618,0.34725669026374817
+4242.447171150161,518.2310958925564,4172.404582491971
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.38it/s]
+Experiment 1151
+Epoch 0033 [Train seq (cond on sampled tp)] | Loss 148261383071.379364 | MAPE 3.181833 | RMSE 16680.798527 | Likelihood -148261383032.555359 | KL fp 38.8240 | FP STD 1.5136|
+Epoch 0033 [Val seq (cond on sampled tp)] |  MAPE 2.388102 | RMSE 13602.276280 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.31it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.20it/s]
+Epoch 0033 [Test seq (cond on sampled tp)] | MAPE 0.406822 | RMSE 3016.745221|
+0.5858983993530273,0.2829948663711548,0.3515719175338745
+4282.308723107198,543.7934178067991,4224.13352061698
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.46it/s]
+Experiment 1151
+Epoch 0034 [Train seq (cond on sampled tp)] | Loss 148261870736.896698 | MAPE 3.179429 | RMSE 16681.388401 | Likelihood -148261870698.183624 | KL fp 38.7131 | FP STD 1.3295|
+Epoch 0034 [Val seq (cond on sampled tp)] |  MAPE 2.386984 | RMSE 13598.864658 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.41it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.99it/s]
+Best Val!
+Epoch 0034 [Test seq (cond on sampled tp)] | MAPE 0.414077 | RMSE 3035.696689|
+0.5880293250083923,0.3016808331012726,0.3525197505950928
+4293.257038659577,578.5892325302987,4235.243794635676
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.86it/s]
+Experiment 1151
+Epoch 0035 [Train seq (cond on sampled tp)] | Loss 148260521250.778595 | MAPE 3.177901 | RMSE 16680.753318 | Likelihood -148260521212.871338 | KL fp 37.9073 | FP STD 1.3150|
+Epoch 0035 [Val seq (cond on sampled tp)] |  MAPE 2.386813 | RMSE 13598.698173 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.68it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.45it/s]
+Best Val!
+Epoch 0035 [Test seq (cond on sampled tp)] | MAPE 0.418452 | RMSE 3046.660447|
+0.5882565975189209,0.3133598268032074,0.35374021530151367
+4291.164177702829,598.791987045585,4250.025176396018
+100%|██████████| 8/8 [00:04<00:00,  1.87it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.04it/s]
+Experiment 1151
+Epoch 0036 [Train seq (cond on sampled tp)] | Loss 148261219387.302612 | MAPE 3.177515 | RMSE 16681.057003 | Likelihood -148261219350.287170 | KL fp 37.0154 | FP STD 1.3248|
+Epoch 0036 [Val seq (cond on sampled tp)] |  MAPE 2.386728 | RMSE 13597.751579 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.72it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.10it/s]
+Best Val!
+Epoch 0036 [Test seq (cond on sampled tp)] | MAPE 0.418521 | RMSE 3054.002171|
+0.5933733582496643,0.30815833806991577,0.3540312349796295
+4319.874998191499,588.6562292628865,4253.4752849875595
+100%|██████████| 8/8 [00:04<00:00,  1.87it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.42it/s]
+Experiment 1151
+Epoch 0037 [Train seq (cond on sampled tp)] | Loss 148260270359.388641 | MAPE 3.176987 | RMSE 16679.856504 | Likelihood -148260270323.420868 | KL fp 35.9677 | FP STD 1.5059|
+Epoch 0037 [Val seq (cond on sampled tp)] |  MAPE 2.385925 | RMSE 13595.408637 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.64it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.83it/s]
+Best Val!
+Epoch 0037 [Test seq (cond on sampled tp)] | MAPE 0.418247 | RMSE 3048.395132|
+0.5942373871803284,0.30721086263656616,0.35329321026802063
+4312.192945590446,588.2017617280655,4244.790689774939
+100%|██████████| 8/8 [00:04<00:00,  1.87it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.34it/s]
+Experiment 1151
+Epoch 0038 [Train seq (cond on sampled tp)] | Loss 148260922003.618591 | MAPE 3.176897 | RMSE 16680.589071 | Likelihood -148260921968.537231 | KL fp 35.0813 | FP STD 1.7965|
+Epoch 0038 [Val seq (cond on sampled tp)] |  MAPE 2.386738 | RMSE 13598.338722 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.76it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.72it/s]
+Epoch 0038 [Test seq (cond on sampled tp)] | MAPE 0.416206 | RMSE 3048.604260|
+0.5906493663787842,0.30376529693603516,0.3542028069496155
+4306.734029400934,583.1687416605935,4255.910008447077
+100%|██████████| 8/8 [00:04<00:00,  1.87it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.21it/s]
+Experiment 1151
+Epoch 0039 [Train seq (cond on sampled tp)] | Loss 148261213586.413605 | MAPE 3.177214 | RMSE 16681.062376 | Likelihood -148261213551.934906 | KL fp 34.4787 | FP STD 1.9125|
+Epoch 0039 [Val seq (cond on sampled tp)] |  MAPE 2.386065 | RMSE 13596.264781 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.35it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.38it/s]
+Epoch 0039 [Test seq (cond on sampled tp)] | MAPE 0.420248 | RMSE 3066.142381|
+0.5951727628707886,0.30920886993408203,0.3563615381717682
+4321.699434250374,594.7625051228431,4281.9652030347
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.48it/s]
+Experiment 1151
+Epoch 0040 [Train seq (cond on sampled tp)] | Loss 148260347153.066284 | MAPE 3.177597 | RMSE 16680.346864 | Likelihood -148260347119.240814 | KL fp 33.8255 | FP STD 1.8921|
+Epoch 0040 [Val seq (cond on sampled tp)] |  MAPE 2.387469 | RMSE 13600.737039 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.58it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.61it/s]
+Epoch 0040 [Test seq (cond on sampled tp)] | MAPE 0.416307 | RMSE 3038.640757|
+0.5903075337409973,0.30592823028564453,0.35268381237983704
+4292.428217221576,585.3404458091035,4238.153607409718
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.78it/s]
+Experiment 1151
+Epoch 0041 [Train seq (cond on sampled tp)] | Loss 148260765455.331299 | MAPE 3.177928 | RMSE 16680.623535 | Likelihood -148260765422.430389 | KL fp 32.9009 | FP STD 1.9003|
+Epoch 0041 [Val seq (cond on sampled tp)] |  MAPE 2.387234 | RMSE 13600.507638 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.92it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.14it/s]
+Epoch 0041 [Test seq (cond on sampled tp)] | MAPE 0.417813 | RMSE 3052.622123|
+0.5882638692855835,0.31150633096694946,0.3536699712276459
+4309.62202518968,598.4354079597898,4249.808936881751
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.39it/s]
+Experiment 1151
+Epoch 0042 [Train seq (cond on sampled tp)] | Loss 148261230350.432983 | MAPE 3.177964 | RMSE 16681.689378 | Likelihood -148261230318.138580 | KL fp 32.2944 | FP STD 2.0280|
+Epoch 0042 [Val seq (cond on sampled tp)] |  MAPE 2.388009 | RMSE 13602.630922 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.54it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.79it/s]
+Epoch 0042 [Test seq (cond on sampled tp)] | MAPE 0.418005 | RMSE 3044.714043|
+0.5877500772476196,0.3134644627571106,0.3527998924255371
+4288.494840850342,605.6199303193382,4240.027358402302
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.04it/s]
+Experiment 1151
+Epoch 0043 [Train seq (cond on sampled tp)] | Loss 148261515789.252197 | MAPE 3.177921 | RMSE 16681.581325 | Likelihood -148261515757.852539 | KL fp 31.3996 | FP STD 2.1737|
+Epoch 0043 [Val seq (cond on sampled tp)] |  MAPE 2.386780 | RMSE 13598.950548 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.24it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.18it/s]
+Epoch 0043 [Test seq (cond on sampled tp)] | MAPE 0.418677 | RMSE 3057.231692|
+0.5889632105827332,0.31341442465782166,0.35365453362464905
+4314.675422323214,607.1347152815428,4249.884939618954
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.29it/s]
+Experiment 1151
+Epoch 0044 [Train seq (cond on sampled tp)] | Loss 148260228747.920746 | MAPE 3.177261 | RMSE 16679.772840 | Likelihood -148260228717.277649 | KL fp 30.6431 | FP STD 2.3083|
+Epoch 0044 [Val seq (cond on sampled tp)] |  MAPE 2.386490 | RMSE 13597.538012 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.35it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.09it/s]
+Epoch 0044 [Test seq (cond on sampled tp)] | MAPE 0.416239 | RMSE 3043.209881|
+0.5895050764083862,0.30670684576034546,0.35250476002693176
+4296.806255813729,596.7221139274126,4236.10127357692
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.34it/s]
+Experiment 1151
+Epoch 0045 [Train seq (cond on sampled tp)] | Loss 148261245323.112152 | MAPE 3.176601 | RMSE 16681.320316 | Likelihood -148261245292.796356 | KL fp 30.3158 | FP STD 2.4937|
+Epoch 0045 [Val seq (cond on sampled tp)] |  MAPE 2.386968 | RMSE 13599.018200 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.03it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.95it/s]
+Epoch 0045 [Test seq (cond on sampled tp)] | MAPE 0.422226 | RMSE 3080.134474|
+0.5953546166419983,0.3141092360019684,0.3572145998477936
+4340.96440897642,606.355738201594,4293.0832742913335
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.34it/s]
+Experiment 1151
+Epoch 0046 [Train seq (cond on sampled tp)] | Loss 148260875146.690430 | MAPE 3.176317 | RMSE 16681.650675 | Likelihood -148260875116.797668 | KL fp 29.8928 | FP STD 2.5578|
+Epoch 0046 [Val seq (cond on sampled tp)] |  MAPE 2.386117 | RMSE 13597.279140 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.58it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.31it/s]
+Epoch 0046 [Test seq (cond on sampled tp)] | MAPE 0.418023 | RMSE 3063.413013|
+0.5945203900337219,0.30340737104415894,0.35614195466041565
+4317.077715306965,592.9374967060188,4280.223825923125
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.89it/s]
+Experiment 1151
+Epoch 0047 [Train seq (cond on sampled tp)] | Loss 148261036425.991333 | MAPE 3.176847 | RMSE 16680.206466 | Likelihood -148261036396.797668 | KL fp 29.1937 | FP STD 2.5816|
+Epoch 0047 [Val seq (cond on sampled tp)] |  MAPE 2.384717 | RMSE 13588.866619 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.32it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.01it/s]
+Best Val!
+Epoch 0047 [Test seq (cond on sampled tp)] | MAPE 0.419986 | RMSE 3064.407808|
+0.5883377194404602,0.3176492750644684,0.35397133231163025
+4312.288487566666,626.1627933293386,4254.772144310433
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.87it/s]
+Experiment 1151
+Epoch 0048 [Train seq (cond on sampled tp)] | Loss 148259346568.573700 | MAPE 3.177845 | RMSE 16678.564139 | Likelihood -148259346540.504578 | KL fp 28.0691 | FP STD 2.6259|
+Epoch 0048 [Val seq (cond on sampled tp)] |  MAPE 2.386151 | RMSE 13595.306249 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.66it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.14it/s]
+Epoch 0048 [Test seq (cond on sampled tp)] | MAPE 0.409091 | RMSE 3027.992854|
+0.5924936532974243,0.28514888882637024,0.349629282951355
+4317.066596660283,564.5138395114863,4202.398124880602
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.85it/s]
+Experiment 1151
+Epoch 0049 [Train seq (cond on sampled tp)] | Loss 148261088263.503113 | MAPE 3.179073 | RMSE 16680.862163 | Likelihood -148261088236.349396 | KL fp 27.1537 | FP STD 2.6825|
+Epoch 0049 [Val seq (cond on sampled tp)] |  MAPE 2.387226 | RMSE 13598.817007 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.88it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.13it/s]
+Epoch 0049 [Test seq (cond on sampled tp)] | MAPE 0.418647 | RMSE 3052.633830|
+0.5889620780944824,0.313375324010849,0.3536034822463989
+4298.422966623923,609.0241938954478,4250.454328657114
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.55it/s]
+Experiment 1151
+Epoch 0050 [Train seq (cond on sampled tp)] | Loss 148261141638.957458 | MAPE 3.180166 | RMSE 16680.655053 | Likelihood -148261141612.270844 | KL fp 26.6866 | FP STD 2.6375|
+Epoch 0050 [Val seq (cond on sampled tp)] |  MAPE 2.386584 | RMSE 13596.673711 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.15it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.04it/s]
+Epoch 0050 [Test seq (cond on sampled tp)] | MAPE 0.413656 | RMSE 3038.963403|
+0.5846824645996094,0.30586764216423035,0.35041704773902893
+4298.077942522681,606.3433948679576,4212.468872288554
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.23it/s]
+Experiment 1151
+Epoch 0051 [Train seq (cond on sampled tp)] | Loss 148261578118.464630 | MAPE 3.178897 | RMSE 16682.111737 | Likelihood -148261578092.155579 | KL fp 26.3090 | FP STD 2.6388|
+Epoch 0051 [Val seq (cond on sampled tp)] |  MAPE 2.388272 | RMSE 13604.031755 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.41it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.71it/s]
+Epoch 0051 [Test seq (cond on sampled tp)] | MAPE 0.411063 | RMSE 3036.279921|
+0.5845517516136169,0.29458460211753845,0.354053258895874
+4268.388220394204,583.8557184784611,4256.595822955241
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.25it/s]
+Experiment 1151
+Epoch 0052 [Train seq (cond on sampled tp)] | Loss 148261239429.838135 | MAPE 3.178351 | RMSE 16681.939343 | Likelihood -148261239403.844818 | KL fp 25.9933 | FP STD 2.5936|
+Epoch 0052 [Val seq (cond on sampled tp)] |  MAPE 2.389080 | RMSE 13607.091093 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.67it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.90it/s]
+Epoch 0052 [Test seq (cond on sampled tp)] | MAPE 0.420298 | RMSE 3053.094031|
+0.5908750295639038,0.317756712436676,0.3522609770298004
+4300.281153599146,624.6251876125393,4234.375750922442
+100%|██████████| 8/8 [00:04<00:00,  1.82it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.12it/s]
+Experiment 1151
+Epoch 0053 [Train seq (cond on sampled tp)] | Loss 148261090949.369263 | MAPE 3.177676 | RMSE 16680.660703 | Likelihood -148261090923.615387 | KL fp 25.7539 | FP STD 2.6190|
+Epoch 0053 [Val seq (cond on sampled tp)] |  MAPE 2.387590 | RMSE 13602.585048 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.03it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.21it/s]
+Epoch 0053 [Test seq (cond on sampled tp)] | MAPE 0.418578 | RMSE 3055.041537|
+0.5997863411903381,0.3050108551979065,0.35093769431114197
+4341.262949879908,606.0321257986246,4217.829536621887
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.92it/s]
+Experiment 1151
+Epoch 0054 [Train seq (cond on sampled tp)] | Loss 148262238469.244537 | MAPE 3.177037 | RMSE 16681.389840 | Likelihood -148262238443.628387 | KL fp 25.6162 | FP STD 2.6740|
+Epoch 0054 [Val seq (cond on sampled tp)] |  MAPE 2.386989 | RMSE 13600.512932 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.38it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.02it/s]
+Epoch 0054 [Test seq (cond on sampled tp)] | MAPE 0.415618 | RMSE 3062.276773|
+0.5917140245437622,0.29930579662323,0.3558335304260254
+4313.646485283652,596.1035197430057,4277.080312549672
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.65it/s]
+Experiment 1151
+Epoch 0055 [Train seq (cond on sampled tp)] | Loss 148262723589.310120 | MAPE 3.176032 | RMSE 16680.901549 | Likelihood -148262723563.986145 | KL fp 25.3240 | FP STD 2.6885|
+Epoch 0055 [Val seq (cond on sampled tp)] |  MAPE 2.386140 | RMSE 13593.491972 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.70it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.17it/s]
+Epoch 0055 [Test seq (cond on sampled tp)] | MAPE 0.425860 | RMSE 3087.516652|
+0.6006650924682617,0.32165244221687317,0.3552611470222473
+4363.945920838158,627.9773831516546,4270.62665190953
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.28it/s]
+Experiment 1151
+Epoch 0056 [Train seq (cond on sampled tp)] | Loss 148260608516.791443 | MAPE 3.176386 | RMSE 16680.857082 | Likelihood -148260608491.677399 | KL fp 25.1140 | FP STD 2.6726|
+Epoch 0056 [Val seq (cond on sampled tp)] |  MAPE 2.385617 | RMSE 13594.760756 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.22it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.05it/s]
+Epoch 0056 [Test seq (cond on sampled tp)] | MAPE 0.424323 | RMSE 3070.739895|
+0.5983960628509521,0.31943580508232117,0.3551378548145294
+4315.787297817166,627.1701573337175,4269.262231346302
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.28it/s]
+Experiment 1151
+Epoch 0057 [Train seq (cond on sampled tp)] | Loss 148262878084.208221 | MAPE 3.174665 | RMSE 16682.381320 | Likelihood -148262878059.026550 | KL fp 25.1817 | FP STD 2.7019|
+Epoch 0057 [Val seq (cond on sampled tp)] |  MAPE 2.385056 | RMSE 13594.151095 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.51it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.37it/s]
+Epoch 0057 [Test seq (cond on sampled tp)] | MAPE 0.428887 | RMSE 3094.577909|
+0.5971630215644836,0.3329128921031952,0.35658445954322815
+4341.75079892893,655.2114162619574,4286.771512455498
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.23it/s]
+Experiment 1151
+Epoch 0058 [Train seq (cond on sampled tp)] | Loss 148261143044.022461 | MAPE 3.174317 | RMSE 16680.843287 | Likelihood -148261143019.192047 | KL fp 24.8304 | FP STD 2.6394|
+Epoch 0058 [Val seq (cond on sampled tp)] |  MAPE 2.388550 | RMSE 13608.255730 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.67it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.32it/s]
+Epoch 0058 [Test seq (cond on sampled tp)] | MAPE 0.429116 | RMSE 3102.474344|
+0.6012888550758362,0.3306187391281128,0.35544171929359436
+4383.622246498893,651.5107683300407,4272.290018245484
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.08it/s]
+Experiment 1151
+Epoch 0059 [Train seq (cond on sampled tp)] | Loss 148260707587.528503 | MAPE 3.176775 | RMSE 16680.761179 | Likelihood -148260707563.320007 | KL fp 24.2085 | FP STD 2.5475|
+Epoch 0059 [Val seq (cond on sampled tp)] |  MAPE 2.388535 | RMSE 13603.701261 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.04it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.04it/s]
+Epoch 0059 [Test seq (cond on sampled tp)] | MAPE 0.415382 | RMSE 3053.537211|
+0.5998660326004028,0.2953023612499237,0.3509768843650818
+4361.718010142334,580.0297944933519,4218.863828094005
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.37it/s]
+Experiment 1151
+Epoch 0060 [Train seq (cond on sampled tp)] | Loss 148262417026.534332 | MAPE 3.179494 | RMSE 16682.437981 | Likelihood -148262417003.213989 | KL fp 23.3203 | FP STD 2.5245|
+Epoch 0060 [Val seq (cond on sampled tp)] |  MAPE 2.387882 | RMSE 13601.332288 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.54it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.07it/s]
+Epoch 0060 [Test seq (cond on sampled tp)] | MAPE 0.411870 | RMSE 3051.391760|
+0.5905817747116089,0.29242023825645447,0.35260775685310364
+4327.947319457574,586.5586341108619,4239.669326728206
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.36it/s]
+Experiment 1151
+Epoch 0061 [Train seq (cond on sampled tp)] | Loss 148263309570.310638 | MAPE 3.178951 | RMSE 16681.535646 | Likelihood -148263309547.386627 | KL fp 22.9240 | FP STD 2.4875|
+Epoch 0061 [Val seq (cond on sampled tp)] |  MAPE 2.386532 | RMSE 13597.158527 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.66it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.97it/s]
+Epoch 0061 [Test seq (cond on sampled tp)] | MAPE 0.416219 | RMSE 3038.572271|
+0.5901226997375488,0.3055056035518646,0.3530274033546448
+4271.604616534634,599.7059956762147,4244.406201107524
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.92it/s]
+Experiment 1151
+Epoch 0062 [Train seq (cond on sampled tp)] | Loss 148261569537.824890 | MAPE 3.177884 | RMSE 16680.101851 | Likelihood -148261569515.363678 | KL fp 22.4612 | FP STD 2.4210|
+Epoch 0062 [Val seq (cond on sampled tp)] |  MAPE 2.386832 | RMSE 13599.144091 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.97it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.23it/s]
+Epoch 0062 [Test seq (cond on sampled tp)] | MAPE 0.419660 | RMSE 3052.774774|
+0.587832510471344,0.31750431656837463,0.35364195704460144
+4290.622099416354,616.740448851865,4250.961773528433
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.36it/s]
+Experiment 1151
+Epoch 0063 [Train seq (cond on sampled tp)] | Loss 148263005569.650970 | MAPE 3.178071 | RMSE 16683.006421 | Likelihood -148263005547.439331 | KL fp 22.2116 | FP STD 2.4737|
+Epoch 0063 [Val seq (cond on sampled tp)] |  MAPE 2.385910 | RMSE 13596.132980 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.62it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.47it/s]
+Epoch 0063 [Test seq (cond on sampled tp)] | MAPE 0.415378 | RMSE 3050.078840|
+0.5953301787376404,0.2980526387691498,0.3527504503726959
+4326.491650286638,582.8312899115832,4240.9135808219435
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.11it/s]
+Experiment 1151
+Epoch 0064 [Train seq (cond on sampled tp)] | Loss 148263020801.543182 | MAPE 3.177197 | RMSE 16683.568061 | Likelihood -148263020779.570404 | KL fp 21.9728 | FP STD 2.5566|
+Epoch 0064 [Val seq (cond on sampled tp)] |  MAPE 2.387051 | RMSE 13600.446463 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.78it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.12it/s]
+Epoch 0064 [Test seq (cond on sampled tp)] | MAPE 0.423983 | RMSE 3088.515564|
+0.5932255387306213,0.32159027457237244,0.35713255405426025
+4341.5849640425095,630.9560206543717,4293.005706961033
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.11it/s]
+Experiment 1151
+Epoch 0065 [Train seq (cond on sampled tp)] | Loss 148263334913.233704 | MAPE 3.175236 | RMSE 16683.007538 | Likelihood -148263334891.364258 | KL fp 21.8694 | FP STD 2.5576|
+Epoch 0065 [Val seq (cond on sampled tp)] |  MAPE 2.387388 | RMSE 13601.970445 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.52it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.25it/s]
+Epoch 0065 [Test seq (cond on sampled tp)] | MAPE 0.424498 | RMSE 3064.465907|
+0.5956598520278931,0.32362520694732666,0.3542095720767975
+4303.695156490525,631.1586815136111,4258.543882596491
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.95it/s]
+Experiment 1151
+Epoch 0066 [Train seq (cond on sampled tp)] | Loss 148262206849.102203 | MAPE 3.174633 | RMSE 16681.143606 | Likelihood -148262206827.438904 | KL fp 21.6633 | FP STD 2.5839|
+Epoch 0066 [Val seq (cond on sampled tp)] |  MAPE 2.385920 | RMSE 13597.851595 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.65it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.22it/s]
+Epoch 0066 [Test seq (cond on sampled tp)] | MAPE 0.431458 | RMSE 3101.603010|
+0.6063401103019714,0.3313281238079071,0.35670503973960876
+4375.916589698666,640.8499970741983,4288.042443819791
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.43it/s]
+Experiment 1151
+Epoch 0067 [Train seq (cond on sampled tp)] | Loss 148263289344.814026 | MAPE 3.174433 | RMSE 16681.002398 | Likelihood -148263289323.472900 | KL fp 21.3411 | FP STD 2.5696|
+Epoch 0067 [Val seq (cond on sampled tp)] |  MAPE 2.386182 | RMSE 13595.955281 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.63it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.96it/s]
+Epoch 0067 [Test seq (cond on sampled tp)] | MAPE 0.436616 | RMSE 3136.219432|
+0.6006866097450256,0.3492518663406372,0.3599100112915039
+4389.453268916301,692.0865868877969,4327.118440717795
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.34it/s]
+Experiment 1151
+Epoch 0068 [Train seq (cond on sampled tp)] | Loss 148261398400.450165 | MAPE 3.173776 | RMSE 16680.448143 | Likelihood -148261398379.345032 | KL fp 21.1051 | FP STD 2.5340|
+Epoch 0068 [Val seq (cond on sampled tp)] |  MAPE 2.387061 | RMSE 13603.135521 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.37it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.64it/s]
+Epoch 0068 [Test seq (cond on sampled tp)] | MAPE 0.433562 | RMSE 3111.597130|
+0.598639726638794,0.34161266684532166,0.36043301224708557
+4342.597379449308,660.1185262890294,4332.0754841068965
+100%|██████████| 8/8 [00:04<00:00,  1.81it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.08it/s]
+Experiment 1151
+Epoch 0069 [Train seq (cond on sampled tp)] | Loss 148260637824.041779 | MAPE 3.173918 | RMSE 16681.355438 | Likelihood -148260637803.181061 | KL fp 20.8607 | FP STD 2.4926|
+Epoch 0069 [Val seq (cond on sampled tp)] |  MAPE 2.386523 | RMSE 13600.777625 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.40it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.10it/s]
+Epoch 0069 [Test seq (cond on sampled tp)] | MAPE 0.434389 | RMSE 3110.520539|
+0.6065466403961182,0.3385847508907318,0.3580353558063507
+4378.073548948213,650.2636965108848,4303.224372490935
+100%|██████████| 8/8 [00:04<00:00,  1.82it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.23it/s]
+Experiment 1151
+Epoch 0070 [Train seq (cond on sampled tp)] | Loss 148260953215.786499 | MAPE 3.172394 | RMSE 16681.805298 | Likelihood -148260953195.150116 | KL fp 20.6364 | FP STD 2.4405|
+Epoch 0070 [Val seq (cond on sampled tp)] |  MAPE 2.385633 | RMSE 13594.927289 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.95it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.28it/s]
+Epoch 0070 [Test seq (cond on sampled tp)] | MAPE 0.437616 | RMSE 3125.276005|
+0.6030296683311462,0.3524242043495178,0.35739293694496155
+4395.20329450186,685.8588366056094,4294.765884189731
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.10it/s]
+Experiment 1151
+Epoch 0071 [Train seq (cond on sampled tp)] | Loss 148258280318.859375 | MAPE 3.172519 | RMSE 16678.492962 | Likelihood -148258280298.591980 | KL fp 20.2674 | FP STD 2.3691|
+Epoch 0071 [Val seq (cond on sampled tp)] |  MAPE 2.384700 | RMSE 13590.710945 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.51it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.24it/s]
+Best Val!
+Epoch 0071 [Test seq (cond on sampled tp)] | MAPE 0.428054 | RMSE 3110.904239|
+0.5985011458396912,0.3280635476112366,0.35759857296943665
+4391.370856577704,642.9186622349673,4298.423199267378
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.03it/s]
+Experiment 1151
+Epoch 0072 [Train seq (cond on sampled tp)] | Loss 148262211839.111816 | MAPE 3.174244 | RMSE 16681.400706 | Likelihood -148262211819.178741 | KL fp 19.9331 | FP STD 2.3160|
+Epoch 0072 [Val seq (cond on sampled tp)] |  MAPE 2.385961 | RMSE 13595.499844 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.11it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.96it/s]
+Epoch 0072 [Test seq (cond on sampled tp)] | MAPE 0.431319 | RMSE 3094.620472|
+0.6025001406669617,0.3365360200405121,0.35492217540740967
+4361.56462751614,655.2315191976039,4267.065267839244
+100%|██████████| 8/8 [00:04<00:00,  1.81it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.12it/s]
+Experiment 1151
+Epoch 0073 [Train seq (cond on sampled tp)] | Loss 148261369342.710388 | MAPE 3.173872 | RMSE 16681.075520 | Likelihood -148261369322.974731 | KL fp 19.7357 | FP STD 2.2148|
+Epoch 0073 [Val seq (cond on sampled tp)] |  MAPE 2.384441 | RMSE 13591.454963 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.68it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.38it/s]
+Best Val!
+Epoch 0073 [Test seq (cond on sampled tp)] | MAPE 0.432622 | RMSE 3111.297829|
+0.6017350554466248,0.33730781078338623,0.3588234484195709
+4367.292983073153,653.9760125570356,4312.624490956754
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.15it/s]
+Experiment 1151
+Epoch 0074 [Train seq (cond on sampled tp)] | Loss 148259548030.715332 | MAPE 3.173757 | RMSE 16679.670201 | Likelihood -148259548011.096497 | KL fp 19.6188 | FP STD 2.1592|
+Epoch 0074 [Val seq (cond on sampled tp)] |  MAPE 2.385017 | RMSE 13593.563183 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.11it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.10it/s]
+Epoch 0074 [Test seq (cond on sampled tp)] | MAPE 0.426613 | RMSE 3093.690418|
+0.5972304940223694,0.326150119304657,0.35645896196365356
+4361.918843811746,634.0421417382287,4285.110266959299
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.03it/s]
+Experiment 1151
+Epoch 0075 [Train seq (cond on sampled tp)] | Loss 148260747262.671326 | MAPE 3.174351 | RMSE 16681.319065 | Likelihood -148260747243.175537 | KL fp 19.4958 | FP STD 2.2449|
+Epoch 0075 [Val seq (cond on sampled tp)] |  MAPE 2.387463 | RMSE 13604.419282 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.94it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.55it/s]
+Epoch 0075 [Test seq (cond on sampled tp)] | MAPE 0.426519 | RMSE 3099.905857|
+0.602462887763977,0.3210206627845764,0.35607290267944336
+4386.76874248005,632.8238301454837,4280.124998174703
+100%|██████████| 8/8 [00:04<00:00,  1.82it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.17it/s]
+Experiment 1151
+Epoch 0076 [Train seq (cond on sampled tp)] | Loss 148262143485.875427 | MAPE 3.174994 | RMSE 16680.603916 | Likelihood -148262143466.607452 | KL fp 19.2680 | FP STD 2.2959|
+Epoch 0076 [Val seq (cond on sampled tp)] |  MAPE 2.384391 | RMSE 13590.859281 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.23it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.85it/s]
+Best Val!
+Epoch 0076 [Test seq (cond on sampled tp)] | MAPE 0.425918 | RMSE 3081.114966|
+0.5962379574775696,0.32628318667411804,0.3552323877811432
+4336.981208167727,636.3641596994602,4269.999531615899
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.45it/s]
+Experiment 1151
+Epoch 0077 [Train seq (cond on sampled tp)] | Loss 148262917246.238068 | MAPE 3.173870 | RMSE 16681.912420 | Likelihood -148262917227.183350 | KL fp 19.0547 | FP STD 2.2857|
+Epoch 0077 [Val seq (cond on sampled tp)] |  MAPE 2.386156 | RMSE 13598.682289 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.73it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.67it/s]
+Epoch 0077 [Test seq (cond on sampled tp)] | MAPE 0.425240 | RMSE 3103.501555|
+0.5990284085273743,0.3172392249107361,0.35945093631744385
+4361.751483062739,628.0937430033832,4320.659440409531
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.89it/s]
+Experiment 1151
+Epoch 0078 [Train seq (cond on sampled tp)] | Loss 148260477949.779999 | MAPE 3.172907 | RMSE 16680.666728 | Likelihood -148260477930.945435 | KL fp 18.8346 | FP STD 2.2480|
+Epoch 0078 [Val seq (cond on sampled tp)] |  MAPE 2.385857 | RMSE 13597.062624 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.36it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.14it/s]
+Epoch 0078 [Test seq (cond on sampled tp)] | MAPE 0.432773 | RMSE 3101.473051|
+0.5982320308685303,0.3450452983379364,0.3550417721271515
+4366.379507097385,670.8215811599981,4267.218063328847
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.95it/s]
+Experiment 1151
+Epoch 0079 [Train seq (cond on sampled tp)] | Loss 148261434621.630737 | MAPE 3.172323 | RMSE 16679.814313 | Likelihood -148261434603.039490 | KL fp 18.5913 | FP STD 2.1936|
+Epoch 0079 [Val seq (cond on sampled tp)] |  MAPE 2.386065 | RMSE 13598.504035 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.28it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.96it/s]
+Epoch 0079 [Test seq (cond on sampled tp)] | MAPE 0.425992 | RMSE 3090.875853|
+0.6048759818077087,0.3168776035308838,0.3562227785587311
+4373.707351892671,617.4893723781811,4281.430835596903
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.00it/s]
+Experiment 1151
+Epoch 0080 [Train seq (cond on sampled tp)] | Loss 148259151612.532074 | MAPE 3.173838 | RMSE 16678.826300 | Likelihood -148259151594.269104 | KL fp 18.2630 | FP STD 2.1812|
+Epoch 0080 [Val seq (cond on sampled tp)] |  MAPE 2.386267 | RMSE 13599.729997 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.42it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.59it/s]
+Epoch 0080 [Test seq (cond on sampled tp)] | MAPE 0.426748 | RMSE 3096.529594|
+0.6008947491645813,0.3230310082435608,0.35631805658340454
+4371.854297663635,634.1945925739197,4283.539891258163
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.40it/s]
+Experiment 1151
+Epoch 0081 [Train seq (cond on sampled tp)] | Loss 148261459196.026245 | MAPE 3.174865 | RMSE 16680.978411 | Likelihood -148261459178.149017 | KL fp 17.8773 | FP STD 2.2711|
+Epoch 0081 [Val seq (cond on sampled tp)] |  MAPE 2.385535 | RMSE 13596.220651 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.50it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.70it/s]
+Epoch 0081 [Test seq (cond on sampled tp)] | MAPE 0.422846 | RMSE 3086.285581|
+0.5904205441474915,0.32071569561958313,0.35740309953689575
+4331.007734927288,630.9273185161663,4296.921688837254
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.25it/s]
+Experiment 1151
+Epoch 0082 [Train seq (cond on sampled tp)] | Loss 148261478524.333679 | MAPE 3.174989 | RMSE 16683.005634 | Likelihood -148261478506.543030 | KL fp 17.7907 | FP STD 2.3228|
+Epoch 0082 [Val seq (cond on sampled tp)] |  MAPE 2.384989 | RMSE 13593.147686 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.34it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.16it/s]
+Epoch 0082 [Test seq (cond on sampled tp)] | MAPE 0.422460 | RMSE 3075.036488|
+0.5961934328079224,0.3165941834449768,0.354591965675354
+4336.729873994921,625.1322360109099,4263.247353837213
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.68it/s]
+Experiment 1151
+Epoch 0083 [Train seq (cond on sampled tp)] | Loss 148260157947.953156 | MAPE 3.173827 | RMSE 16679.662062 | Likelihood -148260157930.193359 | KL fp 17.7598 | FP STD 2.3457|
+Epoch 0083 [Val seq (cond on sampled tp)] |  MAPE 2.383776 | RMSE 13588.958459 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.55it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.08it/s]
+Best Val!
+Epoch 0083 [Test seq (cond on sampled tp)] | MAPE 0.436572 | RMSE 3122.717913|
+0.606847882270813,0.34357914328575134,0.3592889606952667
+4375.69400209841,673.2672203516223,4319.19251712632
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.97it/s]
+Experiment 1151
+Epoch 0084 [Train seq (cond on sampled tp)] | Loss 148259563900.079071 | MAPE 3.173980 | RMSE 16680.328017 | Likelihood -148259563882.135468 | KL fp 17.9436 | FP STD 2.4930|
+Epoch 0084 [Val seq (cond on sampled tp)] |  MAPE 2.386546 | RMSE 13600.645279 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.08it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.59it/s]
+Epoch 0084 [Test seq (cond on sampled tp)] | MAPE 0.423406 | RMSE 3100.889181|
+0.606381356716156,0.3046064078807831,0.3592292368412018
+4378.961520726119,603.3273365263669,4320.378687106027
+100%|██████████| 8/8 [00:04<00:00,  1.81it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.68it/s]
+Experiment 1151
+Epoch 0085 [Train seq (cond on sampled tp)] | Loss 148262554107.785309 | MAPE 3.173642 | RMSE 16682.391660 | Likelihood -148262554089.708618 | KL fp 18.0767 | FP STD 2.5319|
+Epoch 0085 [Val seq (cond on sampled tp)] |  MAPE 2.383430 | RMSE 13588.243154 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.77it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.23it/s]
+Best Val!
+Epoch 0085 [Test seq (cond on sampled tp)] | MAPE 0.426696 | RMSE 3095.419384|
+0.5935763120651245,0.3297789692878723,0.3567313253879547
+4336.525567778887,660.7252407392955,4289.007344363029
+100%|██████████| 8/8 [00:04<00:00,  1.82it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.82it/s]
+Experiment 1151
+Epoch 0086 [Train seq (cond on sampled tp)] | Loss 148262731515.638031 | MAPE 3.173205 | RMSE 16684.243428 | Likelihood -148262731497.558594 | KL fp 18.0794 | FP STD 2.6040|
+Epoch 0086 [Val seq (cond on sampled tp)] |  MAPE 2.384922 | RMSE 13593.403694 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.63it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.13it/s]
+Epoch 0086 [Test seq (cond on sampled tp)] | MAPE 0.429798 | RMSE 3095.963898|
+0.5999401807785034,0.3338887095451355,0.35556522011756897
+4352.413353531579,660.7128489366618,4274.765490643902
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.88it/s]
+Experiment 1151
+Epoch 0087 [Train seq (cond on sampled tp)] | Loss 148263888123.313385 | MAPE 3.172719 | RMSE 16683.875659 | Likelihood -148263888105.413635 | KL fp 17.8997 | FP STD 2.6190|
+Epoch 0087 [Val seq (cond on sampled tp)] |  MAPE 2.385724 | RMSE 13597.312676 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.52it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.86it/s]
+Epoch 0087 [Test seq (cond on sampled tp)] | MAPE 0.433891 | RMSE 3118.037058|
+0.6020750403404236,0.34352362155914307,0.3560742735862732
+4400.201131766592,670.7100714914009,4283.199971983564
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.07it/s]
+Experiment 1151
+Epoch 0088 [Train seq (cond on sampled tp)] | Loss 148259199995.208496 | MAPE 3.173299 | RMSE 16679.078647 | Likelihood -148259199977.227814 | KL fp 17.9807 | FP STD 2.6015|
+Epoch 0088 [Val seq (cond on sampled tp)] |  MAPE 2.386831 | RMSE 13603.403692 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.21it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.11it/s]
+Epoch 0088 [Test seq (cond on sampled tp)] | MAPE 0.425646 | RMSE 3114.267439|
+0.6109082698822021,0.30557191371917725,0.3604573607444763
+4389.802273451504,618.6248863406645,4334.375156813263
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.42it/s]
+Experiment 1151
+Epoch 0089 [Train seq (cond on sampled tp)] | Loss 148263234171.888184 | MAPE 3.170809 | RMSE 16681.019805 | Likelihood -148263234154.020508 | KL fp 17.8677 | FP STD 2.6337|
+Epoch 0089 [Val seq (cond on sampled tp)] |  MAPE 2.385864 | RMSE 13595.426290 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.39it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.78it/s]
+Epoch 0089 [Test seq (cond on sampled tp)] | MAPE 0.441461 | RMSE 3154.984671|
+0.5988039970397949,0.36427757143974304,0.3613022565841675
+4399.134460322849,720.6493599525361,4345.170192293968
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.22it/s]
+Experiment 1151
+Epoch 0090 [Train seq (cond on sampled tp)] | Loss 148261087483.297180 | MAPE 3.169770 | RMSE 16678.736268 | Likelihood -148261087465.511902 | KL fp 17.7853 | FP STD 2.6239|
+Epoch 0090 [Val seq (cond on sampled tp)] |  MAPE 2.384080 | RMSE 13595.889967 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.00it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.97it/s]
+Epoch 0090 [Test seq (cond on sampled tp)] | MAPE 0.443791 | RMSE 3162.320753|
+0.6103141903877258,0.35918617248535156,0.3618733882904053
+4427.207471985021,708.5528826417969,4351.201902922915
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.07it/s]
+Experiment 1151
+Epoch 0091 [Train seq (cond on sampled tp)] | Loss 148263366139.453766 | MAPE 3.170074 | RMSE 16682.652929 | Likelihood -148263366121.840759 | KL fp 17.6130 | FP STD 2.5972|
+Epoch 0091 [Val seq (cond on sampled tp)] |  MAPE 2.385038 | RMSE 13596.631936 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.30it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.95it/s]
+Epoch 0091 [Test seq (cond on sampled tp)] | MAPE 0.439324 | RMSE 3136.530179|
+0.6118589043617249,0.34432753920555115,0.36178702116012573
+4383.630002634803,674.6255674446381,4351.3349675702975
+100%|██████████| 8/8 [00:04<00:00,  1.85it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.59it/s]
+Experiment 1151
+Epoch 0092 [Train seq (cond on sampled tp)] | Loss 148261567483.145813 | MAPE 3.169742 | RMSE 16681.100593 | Likelihood -148261567465.645264 | KL fp 17.5005 | FP STD 2.5474|
+Epoch 0092 [Val seq (cond on sampled tp)] |  MAPE 2.384289 | RMSE 13593.980433 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.79it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.71it/s]
+Epoch 0092 [Test seq (cond on sampled tp)] | MAPE 0.434382 | RMSE 3137.599505|
+0.6059000492095947,0.33719348907470703,0.36005204916000366
+4404.872529370175,676.9020885622972,4331.02389741733
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.38it/s]
+Experiment 1151
+Epoch 0093 [Train seq (cond on sampled tp)] | Loss 148259787259.264740 | MAPE 3.169280 | RMSE 16676.750688 | Likelihood -148259787241.929321 | KL fp 17.3354 | FP STD 2.5360|
+Epoch 0093 [Val seq (cond on sampled tp)] |  MAPE 2.383807 | RMSE 13591.365494 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.31it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.32it/s]
+Epoch 0093 [Test seq (cond on sampled tp)] | MAPE 0.428378 | RMSE 3097.955418|
+0.596141517162323,0.3331442177295685,0.35584747791290283
+4350.557205692163,663.9121270921326,4279.3969201278815
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.12it/s]
+Experiment 1151
+Epoch 0094 [Train seq (cond on sampled tp)] | Loss 148263032826.675507 | MAPE 3.171678 | RMSE 16681.990394 | Likelihood -148263032809.635376 | KL fp 17.0401 | FP STD 2.5299|
+Epoch 0094 [Val seq (cond on sampled tp)] |  MAPE 2.386802 | RMSE 13605.725265 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.24it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.98it/s]
+Epoch 0094 [Test seq (cond on sampled tp)] | MAPE 0.427426 | RMSE 3100.883571|
+0.6003095507621765,0.3258141279220581,0.3561544716358185
+4377.98446776596,641.3117173029041,4283.3545265364155
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.20it/s]
+Experiment 1151
+Epoch 0095 [Train seq (cond on sampled tp)] | Loss 148261617530.477631 | MAPE 3.172570 | RMSE 16680.658920 | Likelihood -148261617513.732147 | KL fp 16.7455 | FP STD 2.5578|
+Epoch 0095 [Val seq (cond on sampled tp)] |  MAPE 2.385279 | RMSE 13596.256544 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.46it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.11it/s]
+Epoch 0095 [Test seq (cond on sampled tp)] | MAPE 0.445133 | RMSE 3126.692278|
+0.6039113402366638,0.37295499444007874,0.3585333824157715
+4328.344718249691,739.7024317250823,4312.029684498937
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.24it/s]
+Experiment 1151
+Epoch 0096 [Train seq (cond on sampled tp)] | Loss 148262905082.589935 | MAPE 3.170807 | RMSE 16682.166631 | Likelihood -148262905065.725433 | KL fp 16.8645 | FP STD 2.5498|
+Epoch 0096 [Val seq (cond on sampled tp)] |  MAPE 2.383275 | RMSE 13592.107121 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.39it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.13it/s]
+Best Val!
+Epoch 0096 [Test seq (cond on sampled tp)] | MAPE 0.447071 | RMSE 3155.473080|
+0.6073660254478455,0.3756682574748993,0.35817840695381165
+4417.049467687678,738.8825600188436,4310.487211441417
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.31it/s]
+Experiment 1151
+Epoch 0097 [Train seq (cond on sampled tp)] | Loss 148263085434.656158 | MAPE 3.171086 | RMSE 16681.936893 | Likelihood -148263085417.694366 | KL fp 16.9618 | FP STD 2.5476|
+Epoch 0097 [Val seq (cond on sampled tp)] |  MAPE 2.380826 | RMSE 13584.592449 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 13.67it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.96it/s]
+Best Val!
+Epoch 0097 [Test seq (cond on sampled tp)] | MAPE 0.437701 | RMSE 3147.136531|
+0.6096032857894897,0.33742180466651917,0.3660792410373688
+4371.265491822705,667.5762128776009,4402.567887040471
+100%|██████████| 8/8 [00:04<00:00,  1.86it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.16it/s]
+Experiment 1151
+Epoch 0098 [Train seq (cond on sampled tp)] | Loss 148264634106.494507 | MAPE 3.168802 | RMSE 16683.045967 | Likelihood -148264634089.429504 | KL fp 17.0650 | FP STD 2.5242|
+Epoch 0098 [Val seq (cond on sampled tp)] |  MAPE 2.384118 | RMSE 13595.068518 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.37it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.05it/s]
+Epoch 0098 [Test seq (cond on sampled tp)] | MAPE 0.446681 | RMSE 3170.177223|
+0.6158536672592163,0.3621789813041687,0.362011581659317
+4439.599531489299,717.4941855165099,4353.437951780179
+100%|██████████| 8/8 [00:04<00:00,  1.83it/s]
+100%|██████████| 1/1 [00:00<00:00,  5.92it/s]
+Experiment 1151
+Epoch 0099 [Train seq (cond on sampled tp)] | Loss 148264355451.160767 | MAPE 3.167816 | RMSE 16683.416856 | Likelihood -148264355434.037109 | KL fp 17.1237 | FP STD 2.5197|
+Epoch 0099 [Val seq (cond on sampled tp)] |  MAPE 2.383558 | RMSE 13590.386602 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.16it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  9.11it/s]
+Epoch 0099 [Test seq (cond on sampled tp)] | MAPE 0.450550 | RMSE 3180.195444|
+0.6168891191482544,0.37661823630332947,0.35814207792282104
+4476.532363336604,755.2404418461713,4308.81352578642
+100%|██████████| 8/8 [00:04<00:00,  1.84it/s]
+100%|██████████| 1/1 [00:00<00:00,  6.17it/s]
+Experiment 1151
+Epoch 0100 [Train seq (cond on sampled tp)] | Loss 148258454265.328735 | MAPE 3.170733 | RMSE 16677.653589 | Likelihood -148258454249.563629 | KL fp 15.7651 | FP STD 2.5706|
+Epoch 0100 [Val seq (cond on sampled tp)] |  MAPE 2.388266 | RMSE 13601.147010 |
+predicting data at: Dec
+100%|██████████| 3/3 [00:00<00:00, 14.64it/s]
+average number of edges per graph is 53500.0000
+Computing loss... 
+100%|██████████| 3/3 [00:00<00:00,  8.63it/s]
+Epoch 0100 [Test seq (cond on sampled tp)] | MAPE 0.410984 | RMSE 3031.967086|
+0.585865318775177,0.29491251707077026,0.3521735966205597
+4258.51852173969,600.4800943828196,4236.902642261207
